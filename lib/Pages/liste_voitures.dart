@@ -19,7 +19,9 @@ class _ListeVoitureState extends State<ListeVoiture> {
       //Partie AppBar
       appBar: AppBar(
         backgroundColor: backgrouncolor,
-        leading: GestureDetector(onTap: (){},child: Icon(CupertinoIcons.back,color: textcolor,)),
+        leading: GestureDetector(onTap: (){
+          Navigator.pop(context);
+        },child: Icon(CupertinoIcons.back,color: textcolor,)),
         title: Padding(
           padding: const EdgeInsets.only(left: 45),
           child: Container(

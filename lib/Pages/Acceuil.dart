@@ -1,3 +1,4 @@
+import 'package:entrainement/Pages/liste_voitures.dart';
 import 'package:entrainement/Utils.dart';
 import 'package:flutter/material.dart';
 class Acceuil extends StatefulWidget {
@@ -34,7 +35,7 @@ class _AcceuilState extends State<Acceuil> {
                         children: [
                           Container(
 
-                            child: Icon(Icons.menu,size: 40,color: Color(
+                            child: Icon(Icons.menu,size: 30,color: Color(
                                 0xfff4f4f4),),
                           ),
                         ],
@@ -249,7 +250,9 @@ class _AcceuilState extends State<Acceuil> {
                             Expanded(child: Container(
 
                               child: Center(
-                                child: ElevatedButton(onPressed: (){}, child: Text("Search Car",),style: ElevatedButton.styleFrom(
+                                child: ElevatedButton(onPressed: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (builder)=>ListeVoiture()));
+                                }, child: Text("Search Car",),style: ElevatedButton.styleFrom(
                                   primary: Colors.greenAccent, // Couleur de fond
                                   onPrimary: Colors.black, // Couleur du texte
                                   onSurface: Colors.grey, // Couleur lorsque le bouton est désactivé
